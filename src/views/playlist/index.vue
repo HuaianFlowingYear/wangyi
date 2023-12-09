@@ -23,14 +23,12 @@
                       <img src="https://admirable-jalebi-ce44af.netlify.app/static/needle-ab.png" alt="" class="h-[40vw] absolute top-[-3.2vw] left-[-3.2vw]">
                   </div>
                     <van-popup v-model="show1" :get-container="getContainer" >歌词</van-popup>
-
-                 
                   <div @click="showPopup1" id="cd" :style="{ transform: 'rotate(' + rotationDegree + 'deg)', animationPlayState: isRotating ? 'running' : 'paused'}" :class="{ rotating: isRotating }" class="cd w-[80vw] h-[80vw] absolute top-1/3 left-[10vw]  translate-x-[-50%] translate-y-[-45%]">
                       <div class="absolute w-[80vw] h-[80vw]">
                           <img src="https://admirable-jalebi-ce44af.netlify.app/static/d7e4e3a244701ee85fecb5d4f6b5bd57.png" alt="" class="absolute top-0 w-[80vw] h-[80vw]">
                           <img src="https://admirable-jalebi-ce44af.netlify.app/static/disc_light.png" alt="" class="w-[80vw] h-[80vw] absolute top-0">
                       </div>
-                      <img src="https://p1.music.126.net/9oDdoOSfZHrZ04JNB2qoag==/3321624627806853.jpg" alt="" class="w-[50vw] h-[50vw] absolute translate-x-[30%] translate-y-[30%]  rounded-[50%] border-[5px] border-[#000] rotateAnimation1 paused-animation">
+                      <img :src="mixin_player.currentTrackDetail?.al?.picUrl" alt="" class="w-[50vw] h-[50vw] absolute translate-x-[30%] translate-y-[30%]  rounded-[50%] border-[5px] border-[#000] rotateAnimation1 paused-animation">
                   </div>
               </div>
               <div class="flex flex-wrap content-end">
@@ -88,7 +86,7 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <div v-for="(item,index) in musiclist" :key="item.id" class="flex justify-between items-center h-[14vw]" @click="playimg(index)">
+                                    <div v-for="(item,index) in musiclist" :key="item.id" class="flex justify-between items-center h-[14vw]">
                                         <div class="flex items-center" @click="music(item.name,item.ar[0].name,item.al.picUrl)">
                                             <div  class="w-[4vw] text-[#bfbfbf] text-[3vw] text-center mr-[3.52vw] flex items-center justify-center">
                                                 <span v-if="index!=num">{{ index+1}}</span>
@@ -111,6 +109,7 @@
                                     </div>
                                 </div>
                             </div>
+
                         </van-popup>
                       </div>
                   </div>
@@ -123,13 +122,14 @@
   </template>
   <script>
   import { mapGetters } from 'vuex';
-//   import { personaLized } from "@/service";
+  import { personaLized } from "@/service";
   export default {
      
       data(){
           return {
             show:false,
             show1:false,
+            tracks:[],
             musiclist:[],
             musicName:'',
             author:'',
@@ -140,6 +140,8 @@
             playing:false,
             isTranslating: false,
             rotationInterval: null,
+            num:null
+    
         }   
       }, 
       methods:{
@@ -178,6 +180,18 @@
         }
   
       },
+      async created() {
+        const [err, res] = await personaLized({
+        // id:this.$route.query.id,
+            id:this.getSongId,
+        });
+        if (!err) this.musiclist = res.data.playlist.tracks;
+        console.log('musiclist',this.musiclist);
+        for(let i = 0;i<this.musiclist.length;i++){
+            this.tracks.push(this.musiclist[i].dt);
+        }
+        console.log('tracks1',this.tracks);
+    },
 
       computed: {
           ...mapGetters(['getSongId']),

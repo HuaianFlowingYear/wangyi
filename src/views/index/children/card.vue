@@ -3,8 +3,8 @@
     <div class="flex items-center justify-between">
       <div>{{ title }}</div>
       <div>
-          <van-cell @click="showPopup" style="    background-color: rgb(244,244,244);">
-            <Icon icon="ant-design:more-outlined"/>
+          <van-cell style="background:0" @click="showPopup">
+            <Icon icon="ant-design:more-outlined" class="dark:text-[#e9ebf2] text-2xl"/>
           </van-cell>
           <van-popup
             v-model="show"

@@ -4,7 +4,7 @@
       <div class="flex overflow-hidden mt-[20px]"
         :style="{ width: `${this.resource.creatives.length * 70}vw` }">
         <div class="ml-[2vw] dark:bg-[#25272e] dark:bg-gradient-n dark:from-000 dark:via-000 dark:to-000 shadows w-[88vw] h-[90vw] scroll-item bg-[#fff] mr-[2vw] rounded-[10px] pt-[4vw] pb-[3.8vw] bg-gradient-to from-ff8177 via-ff8c7f to-b12a5b mb-[2vw]" v-for="creative in this.resource.creatives" :key="creative.id">
-          <div v-for="resources in creative.resources" :key="resources.id" class="w-[70vw] h-[10vw] mt-[9vw] ml-[3vw] ">
+          <div v-for="resources in creative?.resources" :key="resources.id" class="w-[70vw] h-[10vw] mt-[9vw] ml-[3vw] ">
             <div class="flex">
                 <img :src="resources.uiElement.image.imageUrl" alt="" class="w-[16vw]  h-[16vw] rounded-[8px]">
                 <div class="text-[3vw] ml-[3vw]">

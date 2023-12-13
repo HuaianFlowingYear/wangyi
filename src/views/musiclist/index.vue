@@ -223,7 +223,7 @@
     },
     mounted() {
     window.addEventListener('scroll', this.handleScroll)
-    console.log("a",this.$route.query);
+    // console.log("a",this.$route.query);
     
       
     // return this.$route.query.id

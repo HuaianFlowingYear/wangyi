@@ -4,7 +4,7 @@
      <div
        class="flex"
        :style="{ width: `200vw` }">
-       <div v-for="creative in this.resource.creatives" :key="creative.id" class="w-[30vw] h-[38vw]  mr-[2vw] relative ">
+       <div v-for="creative in this.resource?.creatives" :key="creative.id" class="w-[30vw] h-[38vw]  mr-[2vw] relative ">
         <div v-if="creative.resources.length>1" class="wgi w-[30vw]">
           <Icon icon="iconoir:infinite" color="white"  class="absolute top-[2vw] left-[23vw] z-10 text-[5vw]"/>
           <Icon icon="ph:play-fill" color="white" class="absolute bottom-[8vw] right-[1vw] text-[4vw]"/>

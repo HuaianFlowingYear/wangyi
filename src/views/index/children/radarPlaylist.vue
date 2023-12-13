@@ -4,14 +4,17 @@
      <div
        class="flex"
        :style="{ width: `200vw` }">
-       <div v-for="creative in this.resource.creatives" :key="creative.id" class=" mr-[2vw] relative overflow-hidden">
+       <div v-for="creative in this.resource?.creatives" :key="creative.id" class=" mr-[2vw] relative overflow-hidden">
          <Icon icon="ph:play-fill" color="white" class="absolute bottom-[8vw] right-[1vw] text-[4vw]"/>
          <span></span>
-         <img
-           class="w-[30vw] h-[30vw] rounded-[8px] overflow-hidden"
-           :src="creative.uiElement.image.imageUrl"
-           alt=""
-         />
+         <router-link :to="{ path: '/musiclist', query: {id:creative.creativeId} }">
+            <img
+            class="w-[30vw] h-[30vw] rounded-[8px] overflow-hidden"
+            :src="creative.uiElement.image.imageUrl"
+            alt=""
+          />
+         </router-link>
+        
          <div class="text-[2.5vw] w-[30vw]" >{{ creative.uiElement.mainTitle.title }}</div>
        </div>
      </div>

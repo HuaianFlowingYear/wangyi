@@ -70,6 +70,18 @@ export default [{
         name: 'playlist',
         component: () =>
             import ('@/views/playlist')
+    },
+    {
+        path: '/commentlist',
+        name: 'commentlist',
+        component: () =>
+            import ('@/views/commentlist')
+    },
+    {
+        path: '/search',
+        name: 'search',
+        component: () =>
+            import ('@/views/search')
     }
 
 

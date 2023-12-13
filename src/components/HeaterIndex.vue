@@ -2,8 +2,7 @@
   <div class="header_index  dark:from-[#2c1a2b] dark:to-[#1a1c23] bg-gradient-to-b from-[#E6E6FB] to-[#f1f1f1] opacity-0.2  w-[100%] bg-[#F4F4F4] pb-[0vw]">
     <ul class="w-[100vw] h-[20vw] p-[3vw] pl-[1vw] flex justify-between items-center">
       <li>
-        <!-- <router-link to="/login"> -->
-          <van-cell @click="showPopup" style="background-color: rgb(231,231,249);">
+          <van-cell style="background:0;padding: 10px 6px;" @click="showPopup">
             <Icon icon="icon-park-solid:more-app" class="dark:text-[#e8eaf2] text-[#3A455B] iconify iconify--majesticons" />
           </van-cell>
           <van-popup v-model="show"   position="left" :style="{ height: '100%',width:'89%' }">
@@ -17,7 +16,6 @@
                             <img :src=myUrl alt="" class="w-[7vw] h-[7vw] rounded-[50%]">
                           </div> 
                         </router-link>
-                       
                         <span class="dark:text-[#f0f0f0] text-[#383838] text-[3.5vw]">{{ myuserName }}</span> 
                         <Icon icon="formkit:right" class="font-[800] w-[6vw] h-[6vw] iconify iconify--mingcute" style="color: rgb(181, 181, 181);"/>
                       </div>
@@ -221,11 +219,10 @@
                               </svg>
                               <span class="dark:text-[#f0f0f0] text-[color:#333333] text-[3.5vw] ml-[2.73vw]">
                                 深色模式
-                               
                               </span>
                             </div>
                             <div class="flex items-center">
-                              <van-switch  v-model="isDark"/>
+                              <van-switch  v-model="isDark" class="w-[3vw]"/>
                             </div>
                           </div>
                           <div class="flex items-center justify-between h-[12vw] px-[3.6vw]">
@@ -394,7 +391,6 @@
                               <span class="dark:text-[#f0f0f0] text-[color:#333333] text-[3.5vw] ml-[2.73vw]">我的订单</span>
                             </div>
                             <div class="flex items-center">
-
                               <Icon icon="formkit:right" class="font-[800] w-[6vw] h-[6vw] iconify iconify--mingcute" style="color: rgb(181, 181, 181);"/>
                             </div>
                           </div>
@@ -405,7 +401,6 @@
                               <span class="dark:text-[#f0f0f0] text-[color:#333333] text-[3.5vw] ml-[2.73vw]">我的订单</span>
                             </div>
                             <div class="flex items-center">
-
                               <Icon icon="formkit:right" class="font-[800] w-[6vw] h-[6vw] iconify iconify--mingcute" style="color: rgb(181, 181, 181);"/>
                             </div>
                           </div>
@@ -418,21 +413,19 @@
                   </div>  
                 </div>
               </div>
-          </van-popup>
-        <!-- </router-link> -->
-         
+          </van-popup>      
       </li>
       <li class="serach leading-1">
-        <span class="absolute left-[3.68vw] top-[3vw] w-[4.47vw] h-[4.47vw] text-[#8189A1] iconify iconify--tabler">
+        <span class="absolute left-[3.68vw] top-[3vw] w-[4.07vw] h-[4.47vw] text-[#8189A1]">
           <Icon icon="lets-icons:search-duotone" />
         </span>
-        <input type="text" name="" id="" class="dark:from-[#34304b] dark:to-[#403246] dark:border-0 text-[4.47vw] pl-[8vw] bg-gradient-to-r from-[#d9ddfd] text-[#8189A1] to-[#f3d9ef] opacity-0.2 w-[75vw] h-[10vw] border-2 border-[#CCCEF7] rounded-[25px]">
-        <span class="absolute right-[3.68vw] top-[3vw] w-[4.47vw] h-[4.47vw] text-[#8189A1] iconify iconify--tabler">
+        <input type="text" name="" id="" class="dark:from-[#34304b]  dark:to-[#403246] dark:border-0 text-[4.47vw] pl-[8vw] bg-gradient-to-r from-[#d9ddfd] text-[#8189A1] to-[#f3d9ef] opacity-0.2 w-[75vw] h-[10vw] border-2 border-[#CCCEF7] rounded-[25px]">
+        <span class="absolute right-[3.68vw] top-[3vw] w-[4.07vw] h-[4.47vw] text-[#8189A1]">
           <Icon icon="lucide:scan-face"/>
         </span>
       </li>
       <li>
-        <Icon icon="icon-park-outline:voice" class="dark:text-[#e8eaf2] text-[#3A455B] iconify iconify--material-symbols"/>
+          <Icon icon="icon-park-outline:voice" class="dark:text-[#e8eaf2] text-[#3A455B]"/>
       </li>
     </ul>
   </div>

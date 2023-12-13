@@ -169,3 +169,8 @@ export const getTrackUrl = (track) => {
 // }
 export const getTrackDetail = (ids) =>
     co(request.get(`/song/detail?timestamp=${Date.now()}`, { params: { ids } }));
+
+// 音乐评论
+export const postCommentMusic = (data) => co(request.post(`/comment/music?timestamp=${ Date.now()}`, data));
+
+// 热搜列表  /search/hot/detail

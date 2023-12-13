@@ -70,10 +70,12 @@ export default class {
     }
 
     play() {
+
         this.playing = true;
         this.duration = this.howl.duration();
         this.interval()
         this.howl.play()
+
     }
 
     pause() {

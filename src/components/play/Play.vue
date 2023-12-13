@@ -1,14 +1,14 @@
 <template>
-    <div tabindex="0" v-on:keydown.space="zanti" v-on:keydown.left="mixin_player.playPreviousTrack()" v-on:keydown.right="mixin_player.playNextTrack()">
-        <div class="px-[4.5vw] bg-[#F9F9FA] h-[14.5vw] border-b-[1px] border-[#F5F8FA] flex items-center w-[100vw] fixed  z-[10] bottom-[14vw]">
+    <div class="" tabindex="0" v-on:keydown.space="zanti" v-on:keydown.left="mixin_player.playPreviousTrack()" v-on:keydown.right="mixin_player.playNextTrack()">
+        <div class="px-[4.5vw] bg-[#F9F9FA] dark:bg-[#000] dark:text-[#fff] h-[14.5vw] border-b-[1px] border-[#F5F8FA] flex items-center w-[100vw] fixed  z-[10] bottom-[14vw]">
             <div class="flex items-center">
-                <div id="imgs" class="w-[10vw] h-[10vw] relative flex items-center justify-center rotateAnimation paused-animation">
-                    <img src="https://admirable-jalebi-ce44af.netlify.app/static/d7e4e3a244701ee85fecb5d4f6b5bd57.png" alt="" class="absolute top-0 left-0 z-[1]">
-                    <!-- <img :src=imgUrl alt="" class="w-[7vw] h-[7vw] rounded-[50%]">
-                        :src="mixin_player.currentTrackDetail?.al?.picUrl"
-                    -->
-                    <img :src="mixin_player.currentTrackDetail?.al?.picUrl" alt="" class="w-[7vw] h-[7vw] rounded-[50%]">
-                </div>
+                <router-link to="/playlist">
+                    <div id="imgs" class="w-[10vw] h-[10vw] relative flex items-center justify-center rotateAnimation paused-animation">
+                        <img src="https://admirable-jalebi-ce44af.netlify.app/static/d7e4e3a244701ee85fecb5d4f6b5bd57.png" alt="" class="absolute top-0 left-0 z-[1]">
+                        <img :src="mixin_player.currentTrackDetail?.al?.picUrl" alt="" class="w-[7vw] h-[7vw] rounded-[50%]">
+                    </div>
+                </router-link>
+               
                 <div class="text-[3vw] w-[60vw] text-ellipsis overflow-hidden whitespace-nowrap ml-[2vw]">
                     <span class="text-[#3E485E]">{{mixin_player.currentTrackDetail?.name}}</span>
                     <span class="text-[#7B8591]">-{{mixin_player.currentTrackDetail?.ar?.map(({name})=>name).join("/")}}</span>
@@ -29,7 +29,7 @@
                     </van-circle>
             </div>
             <div>
-                <van-cell class="bg-[#F9F9FA] color-[#F9F9FA]" @click="showPopup">
+                <van-cell style="background:0" class="bg-[#F9F9FA] color-[#F9F9FA]" @click="showPopup">
                     <Icon icon="fontisto:play-list" class="text-[5vw] text-[#3b4152]"/>
                 </van-cell>
                 <van-popup v-model="show" round position="bottom" :style="{ height: '60%' }" >
@@ -72,7 +72,6 @@
                                     </div>
                                 </div>
                                 </div>
-                             
                                 <div class="flex items-center">
                                     <Icon icon="iwwa:delete" class="text-[5vw] text-[#B1B1B1]"/>
                                 </div>

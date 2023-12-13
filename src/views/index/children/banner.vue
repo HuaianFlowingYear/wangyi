@@ -1,6 +1,6 @@
 <template>
     <!-- <Card :title="resource.uiElement.subTitle.title"  class="w-[90vw] ml-[1vw] mt-[2vw] overflow-hidden"> -->
-        <div class="swiper-container ml-[-1vw] mySwiper3 w-[95vw] h-[45vw] m-[auto] rounded-[3vw] text-center bg-red-100">
+        <div class="swiper-container ml-[-0.45vw] mt-[-4vw] mySwiper3 w-[95vw] h-[55vw] m-[auto] rounded-[3vw] text-center bg-red-100 flex items-center overflow-hidden mx-auto">
           <div class="swiper-wrapper">
               <div class="swiper-slide w-[100%] h-[100%]" v-for="item in bannerArr" :key="item.encodeId" >
                   <img :src="item.imageUrl" class="w-[100%] h-[100%]">

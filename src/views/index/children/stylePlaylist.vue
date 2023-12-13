@@ -3,7 +3,7 @@
         <Scroll class="mt-[-5vw]" >
         <div class="flex overflow-hidden"
           :style="{ width: `${this.resource.creatives.length * 70}vw` }">
-          <div class="w-[90vw] h-[66vw] mt-[1vw]" v-for="creative in this.resource.creatives" :key="creative.id">
+          <div class="w-[90vw] h-[66vw] mt-[1vw]" v-for="creative in this.resource?.creatives" :key="creative.id">
             <div v-for="resources in creative.resources" :key="resources.id" class="w-[70vw] h-[10vw] flex mt-[9vw] ">
                 <img :src="resources.uiElement.image.imageUrl" alt="" class="w-[16vw]  h-[16vw] rounded-[8px]">
                 <div class="text-[3vw] ml-[3vw]">

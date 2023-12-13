@@ -1,6 +1,6 @@
 <template>
 
-  <div class="bg-[#F4F4F4] dark:bg-[#000] opacity-0.2 shou">
+  <div class="bg-[#F4F4F4] dark:bg-[#000] dark:text-[#fff] opacity-0.2 shou">
     <HeaterIndex></HeaterIndex> 
    <div class="content">
     <Block v-for="block in blocks" :resource="block" :key="block.id" />

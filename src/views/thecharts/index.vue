@@ -1,14 +1,14 @@
 <template>
     <div>
+        <!-- class="bg-[rgb(244,244,244)] dark:bg-[#000]" -->
        <div class="buPmeF pb-[24vw]">
            <div class="flex items-center justify-center w-[100%] px-[4vw] py-[3vw] bg-[#fff] dark:bg-[#000] text-[#010101]  text-[4.2vw] font-[600]">
                MV排行榜
            </div>
            <div class="bg-[#fff] dark:bg-[#000]">
-               <van-tabs v-model="active" sticky animated>
-               <van-tab  class="" v-for="(item,index) in arritem" :title='arritem[index].data[0].mv.area'  :key="index">
+               <van-tabs background="rgba(255,0,0,0)" class="bg-[#fff] dark:bg-[rgba(22,21,21,0.5)]" v-model="active" sticky animated>
+               <van-tab class="bg-[#fff] dark:bg-[rgba(22,21,21,0.5)]" v-for="(item,index) in arritem" :title='arritem[index].data[0].mv.area'  :key="index">
                   <div v-for="(arr_item) in item.data" :key="arr_item.id">
-                    <!-- {{arr_item.id}}  -->
                     <div class="w-[92vw] mt-5 ml-[4vw] overflow-auto px-[4vw]">
                         <div class="w-[100%] h-[52vw] relative">
                             <router-link :to="{ path: '/videolist', query: {id:arr_item.id} }">

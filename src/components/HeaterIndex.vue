@@ -347,8 +347,7 @@
                           </div>
                           <div class="flex items-center justify-between h-[12vw] px-[3.6vw]">
                             <div class="flex items-center">
-                              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 24 24" class="dark:text-[#f0f0f0] text-[#333] font-[800] w-[4vw] h-[4vw] iconify iconify--iconoir"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M4 21.4V2.6a.6.6 0 0 1 .6-.6h11.652a.6.6 0 0 1 .424.176l3.148 3.148A.6.6 0 0 1 20 5.75V21.4a.6.6 0 0 1-.6.6H4.6a.6.6 0 0 1-.6-.6M8 10h8m-8 8h8m-8-4h4"></path><path d="M16 2v3.4a.6.6 0 0 0 .6.6H20"></path></g>
-                              </svg>
+                              <Icon icon="mingcute:service-line" class="dark:text-[#f0f0f0] text-[#333] font-[800] w-[4vw] h-[4vw]"/>
                               <span class="dark:text-[#f0f0f0] text-[color:#333333] text-[3.5vw] ml-[2.73vw]">我的客服</span>
                             </div>
                             <div class="flex items-center">
@@ -357,8 +356,7 @@
                           </div>
                           <div class="flex items-center justify-between h-[12vw] px-[3.6vw]">
                             <div class="flex items-center">
-                              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 24 24" class="dark:text-[#f0f0f0] text-[#333] font-[800] w-[4vw] h-[4vw] iconify iconify--iconoir"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M4 21.4V2.6a.6.6 0 0 1 .6-.6h11.652a.6.6 0 0 1 .424.176l3.148 3.148A.6.6 0 0 1 20 5.75V21.4a.6.6 0 0 1-.6.6H4.6a.6.6 0 0 1-.6-.6M8 10h8m-8 8h8m-8-4h4"></path><path d="M16 2v3.4a.6.6 0 0 0 .6.6H20"></path></g>
-                              </svg>
+                              <Icon icon="ri:share-circle-fill" class="dark:text-[#f0f0f0] text-[#333] font-[800] w-[4vw] h-[4vw]"/>
                               <span class="dark:text-[#f0f0f0] text-[color:#333333] text-[3.5vw] ml-[2.73vw]">分享网易云音乐</span>
                             </div>
                             <div class="flex items-center">
@@ -367,8 +365,7 @@
                           </div>
                           <div class="flex items-center justify-between h-[12vw] px-[3.6vw]">
                             <div class="flex items-center">
-                              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 24 24" class="dark:text-[#f0f0f0] text-[#333] font-[800] w-[4vw] h-[4vw] iconify iconify--iconoir"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M4 21.4V2.6a.6.6 0 0 1 .6-.6h11.652a.6.6 0 0 1 .424.176l3.148 3.148A.6.6 0 0 1 20 5.75V21.4a.6.6 0 0 1-.6.6H4.6a.6.6 0 0 1-.6-.6M8 10h8m-8 8h8m-8-4h4"></path><path d="M16 2v3.4a.6.6 0 0 0 .6.6H20"></path></g>
-                              </svg>
+                              <Icon icon="icon-park-twotone:transaction-order" class="dark:text-[#f0f0f0] text-[#333] font-[800] w-[4vw] h-[4vw]"/>
                               <span class="dark:text-[#f0f0f0] text-[color:#333333] text-[3.5vw] ml-[2.73vw]">个人信息收集与使用清单</span>
                             </div>
                             <div class="flex items-center">
@@ -377,7 +374,6 @@
                           </div>
                           <div class="flex items-center justify-between h-[12vw] px-[3.6vw]">
                             <div class="flex items-center">
-                              
                               <Icon icon="bx:file" class="dark:text-[#f0f0f0] text-[#333] font-[800] w-[4vw] h-[4vw]"/>
                               <span class="dark:text-[#f0f0f0] text-[color:#333333] text-[3.5vw] ml-[2.73vw]">个人信息第三方共享清单</span>
                             </div>
@@ -387,8 +383,7 @@
                           </div>
                           <div class="flex items-center justify-between h-[12vw] px-[3.6vw]">
                             <div class="flex items-center">
-                              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 24 24" class="dark:text-[#f0f0f0] text-[#333] font-[800] w-[4vw] h-[4vw] iconify iconify--iconoir"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M4 21.4V2.6a.6.6 0 0 1 .6-.6h11.652a.6.6 0 0 1 .424.176l3.148 3.148A.6.6 0 0 1 20 5.75V21.4a.6.6 0 0 1-.6.6H4.6a.6.6 0 0 1-.6-.6M8 10h8m-8 8h8m-8-4h4"></path><path d="M16 2v3.4a.6.6 0 0 0 .6.6H20"></path></g>
-                              </svg>
+                              <Icon icon="streamline:user-protection-2" class="dark:text-[#f0f0f0] text-[#333] font-[800] w-[4vw] h-[4vw]"/>
                               <span class="dark:text-[#f0f0f0] text-[color:#333333] text-[3.5vw] ml-[2.73vw]">个人信息与隐私保护</span>
                             </div>
                             <div class="flex items-center">
@@ -397,8 +392,7 @@
                           </div>
                           <div class="flex items-center justify-between h-[12vw] px-[3.6vw]">
                             <div class="flex items-center">
-                              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 24 24" class="dark:text-[#f0f0f0] text-[#333] font-[800] w-[4vw] h-[4vw] iconify iconify--iconoir"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M4 21.4V2.6a.6.6 0 0 1 .6-.6h11.652a.6.6 0 0 1 .424.176l3.148 3.148A.6.6 0 0 1 20 5.75V21.4a.6.6 0 0 1-.6.6H4.6a.6.6 0 0 1-.6-.6M8 10h8m-8 8h8m-8-4h4"></path><path d="M16 2v3.4a.6.6 0 0 0 .6.6H20"></path></g>
-                              </svg>
+                              <Icon icon="icon-park-outline:attention" class="dark:text-[#f0f0f0] text-[#333] font-[800] w-[4vw] h-[4vw]"/>
                               <span class="dark:text-[#f0f0f0] text-[color:#333333] text-[3.5vw] ml-[2.73vw]">关于</span>
                             </div>
                             <div class="flex items-center">

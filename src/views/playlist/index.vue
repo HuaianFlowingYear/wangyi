@@ -133,7 +133,7 @@
   <script>
   import { Howl } from 'howler';
   import { mapGetters } from 'vuex';
-  import { personaLized } from "@/service";
+  import { personaLized,getLyric} from "@/service";
   export default {
       data(){
           return {
@@ -153,6 +153,7 @@
             num:null,
             sound: null,
             currentTime: 0,
+            lyric:''
         }   
       }, 
       methods:{
@@ -230,11 +231,19 @@
             id:this.getSongId,
         });
         if (!err) this.musiclist = res.data.playlist.tracks;
-        console.log('musiclist',this.musiclist);
+        // console.log('musiclist',this.musiclist);
         for(let i = 0;i<this.musiclist.length;i++){
             this.tracks.push(this.musiclist[i].dt);
         }
         // console.log('tracks1',this.tracks);
+        // console.log(this.mixin_player.currentTrackDetail.id);
+        const [err1,res1] = await getLyric({
+            // id:this.mixin_player.currentTrackDetail.id,
+            id:this.getSongId,
+        })
+        
+        if (!err1) this.lyric = res1.lrc.lyric;
+        console.log('lyric',res1);
     },
 
       computed: {

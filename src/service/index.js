@@ -170,7 +170,17 @@ export const getTrackUrl = (track) => {
 export const getTrackDetail = (ids) =>
     co(request.get(`/song/detail?timestamp=${Date.now()}`, { params: { ids } }));
 
+// 获取歌词 /lyric
+export const getLyric = (id) =>
+    co(request.post(`/lyric?timestamp=${Date.now()}`, { params: { id } }));
+// export const  = (id) =>
+//     co(request.get(`/lyric?timestamp=${Date.now()}`, { params: { id } }));
+
+
+
 // 音乐评论
 export const postCommentMusic = (data) => co(request.post(`/comment/music?timestamp=${ Date.now()}`, data));
 
-// 热搜列表  /search/hot/detail
+// 所有榜单 /toplist/detail
+export const getTopList = (params) =>
+    co(request.get(`/toplist/detail?timestamp=${ Date.now()}`, { params }));

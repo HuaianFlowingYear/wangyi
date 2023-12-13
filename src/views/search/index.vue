@@ -87,8 +87,15 @@
 
 <script>
 import Scroll from "@/components/Scroll.vue";
+import {getTopList} from "@/service"
 export default {
   components: {Scroll},
+  async created(){
+    const [err,res] = await getTopList()
+    console.log('榜单',res)
+    if(err) return console.log(err);
+    
+  }
 
 }
 </script>
